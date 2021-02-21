@@ -43,7 +43,7 @@
 
 }
 .navbar .menu li {
-    list-style:none;
+    list-style:georgian;
     display: inline-block;
 }
 
@@ -109,14 +109,15 @@
     color: #ffff;
     background:darkslategray;
 }
-section{
-    padding: 100px 0;
-}
 
-.about {
+.about, .services {
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-.about .title {
+section{
+    padding:20px 25px;
+}
+
+section .title {
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -125,7 +126,7 @@ section{
     padding-bottom: 20px;
     font-family:Georgia, 'Times New Roman', Times, serif;
 }
-.about .title::before{
+section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
@@ -135,8 +136,7 @@ section{
     background: #2222;
     transform: translateX(-50%);
 }
-.about .title::after{
-    content: "who am i";
+section .title::after{
     position: absolute;
     bottom: -12px;
     left: 50%;
@@ -146,11 +146,16 @@ section{
     background:#ffff;
     transform: translateX(-50%);
 }
-.about .about-content {
+.about .title::after{
+    content: "A beast";
+}
+.about .about-content,
+.services .serv-content {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    
 }
 .about .about-content .column-left{
     width: 45%;
@@ -190,7 +195,46 @@ section{
     color: brown;
     background: none;
 }
+.services{
+    color: #fff;
+    background: #111;
+}
+.services .title::before{
+    background:lightcyan;
 
+}
+.services .title::after{
+    background: #111;
+    content: "what do i offer";
+}
+.services .serv-content .card{
+    display: flex;
+    background: #222;
+    text-align: center;
+    border-radius: 8px;
+    padding: 30px 20px;
+    flex:0 1 26%;
+    padding: 20px 25px;
+}
+.services .serv-content .card:hover{
+    background:lightpink;
+}
+.services .serv-content .card i{
+    font-size: 50px;
+    color: crimson;
+} 
+.services .serv-content .card .box{
+    transition: all 0.3s ease;
+}
+.services .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+
+.services .serv-content .card .text {
+    font-size: 28px;
+    font-weight: 500px;
+    margin: 10px 5px 7px 5px;
+}
 
 
 
